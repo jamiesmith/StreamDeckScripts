@@ -1,8 +1,7 @@
-heartbeat.monitors:
 - type: http
-  schedule: '@every 5s'
+  schedule: '@every 1s'
   urls:
-    - "https://www.elastic.co"
-    - "https://demo.elastic.co"
-    - "http://fake.elastic.co"
-  check.response.status: 200
+    - "https://www.elastic.co/products/beats/heartbeat"
+  check.response:
+    body: "Lightweight Shipper for Uptime Monitoring"
+    status: 200
