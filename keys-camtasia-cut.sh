@@ -9,6 +9,7 @@ osascript <<END
       	   key down shift
       	   key down control
 	   key code 43
+	   key code 43
       	   key up shift
       	   key up control
 	   keystroke space

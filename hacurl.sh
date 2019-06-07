@@ -7,7 +7,7 @@ function logIt
 
 function hacurlServices
 {
-    source ~/.home_assistant_token
+    source ~/DropBox/.ha_streamdeck_token
     
     logIt "$0 called with $*" >> /tmp/ha.log
     
@@ -29,8 +29,9 @@ function hacurlServices
     # [ -x "$(which jq)" ] || die_usage "ERROR: You need jq - try brew install jq or the linux equivalent"
 
     url="http://nuclet:8123/api/services/${service}"
-        
-    output=$(curl --silent -H "x-ha-access: $HOME_ASSISTANT_TOKEN" -H "Content-Type: application/json" -d "$json" $url)
+
+    # output=$(curl --silent -H "x-ha-access: $HOME_ASSISTANT_TOKEN" -H "Content-Type: application/json" -d "$json" $url)
+    output=$(curl --silent -H "Authorization: Bearer $HOME_ASSISTANT_TOKEN" -H "Content-Type: application/json" -d "$json" $url)
     
     logIt $output
     echo $output
