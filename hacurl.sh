@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source ~/DropBox/.ha_streamdeck_token
+
 function logIt
 {
     echo "$*" >> /tmp/ha.log
@@ -7,7 +9,7 @@ function logIt
 
 function hacurlServices
 {
-    source ~/DropBox/.ha_streamdeck_token
+#    source ~/DropBox/.ha_streamdeck_token
     
     logIt "$0 called with $*" >> /tmp/ha.log
     
@@ -30,7 +32,6 @@ function hacurlServices
 
     url="http://nuclet:8123/api/services/${service}"
 
-    # output=$(curl --silent -H "x-ha-access: $HOME_ASSISTANT_TOKEN" -H "Content-Type: application/json" -d "$json" $url)
     output=$(curl --silent -H "Authorization: Bearer $HOME_ASSISTANT_TOKEN" -H "Content-Type: application/json" -d "$json" $url)
     
     logIt $output
@@ -39,7 +40,7 @@ function hacurlServices
 
 function hacurlStates
 {
-    source ~/.home_assistant_token
+#    source ~/.home_assistant_token
     
     logIt "$0 called with $*" >> /tmp/ha.log
     
@@ -58,8 +59,8 @@ function hacurlStates
     shift $((${OPTIND} - 1))
 
     url="http://nuclet:8123/api/states/${entity}"
-        
-    output=$(curl --silent -H "x-ha-access: $HOME_ASSISTANT_TOKEN" -H "Content-Type: application/json" $url)
+
+    output=$(curl --silent -H "Authorization: Bearer $HOME_ASSISTANT_TOKEN" -H "Content-Type: application/json" $url)
     
     logIt $output
     echo $output
