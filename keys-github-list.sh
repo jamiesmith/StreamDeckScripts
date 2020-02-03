@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pbpaste | awk '{printf("- [ ] %s\n", $0)}' | pbcopy
+pbpaste | awk '{printf("- %s\n", $0)}' | pbcopy
 
 #  osascript <<END
 #      repeat 3 times 
