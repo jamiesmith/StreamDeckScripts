@@ -1,0 +1,83 @@
+#!/bin/sh
+
+for i in {1..72}
+do
+    echo "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-${i}h&rangeTo=now&refreshInterval=0&refreshPaused=true"
+done
+
+exit
+
+
+osascript Dropbox/StreamDeckScripts/chrome_new_window.scpt \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-1h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-2h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-3h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-4h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-5h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-6h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-7h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-8h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-9h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-10h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-11h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-12h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-13h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-14h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-15h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-16h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-17h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-18h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-19h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-20h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-21h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-22h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-23h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-24h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-25h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-26h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-27h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-28h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-29h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-30h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-31h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-32h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-33h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-34h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-35h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-36h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-37h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-38h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-39h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-40h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-41h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-42h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-43h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-44h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-45h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-46h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-47h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-48h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-49h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-50h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-51h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-52h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-53h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-54h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-55h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-56h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-57h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-58h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-59h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-60h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-61h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-62h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-63h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-64h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-65h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-66h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-67h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-68h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-69h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-70h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-71h&rangeTo=now&refreshInterval=0&refreshPaused=true" \
+  "https://dev-oblt.elastic.dev/app/apm#/service-map?rangeFrom=now-72h&rangeTo=now&refreshInterval=0&refreshPaused=true"
