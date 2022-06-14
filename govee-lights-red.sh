@@ -1,0 +1,8 @@
+#!/bin/bash
+
+source $(pwd)/govee-api-utils.sh
+
+service="devices/control"
+
+json='{ "device": "34:9D:A4:C1:38:ED:FF:DF", "model": "H6154", "cmd": { "name": "color", "value": {"r": 255, "g": 0, "b": 0 } } }'
+goveeApiServices -s "${service}"  -j "${json}"

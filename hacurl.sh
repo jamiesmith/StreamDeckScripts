@@ -30,7 +30,7 @@ function hacurlServices
     
     # [ -x "$(which jq)" ] || die_usage "ERROR: You need jq - try brew install jq or the linux equivalent"
 
-    url="http://nuclet:8123/api/services/${service}"
+    url="http://krypter:8123/api/services/${service}"
 
     output=$(curl --silent -H "Authorization: Bearer $HOME_ASSISTANT_TOKEN" -H "Content-Type: application/json" -d "$json" $url)
     
@@ -58,7 +58,7 @@ function hacurlStates
     
     shift $((${OPTIND} - 1))
 
-    url="http://nuclet:8123/api/states/${entity}"
+    url="http://krypter:8123/api/states/${entity}"
 
     output=$(curl --silent -H "Authorization: Bearer $HOME_ASSISTANT_TOKEN" -H "Content-Type: application/json" $url)
     
@@ -73,7 +73,7 @@ function notifyOfficeVolume
     logIt "vol is [$vol]"
 
     vol=$( echo "$vol * 100" | bc -l)
-
+    vol=$(printf "%.0f" $vol)
     message="Office volume set to $vol"
     osascript -e "display notification \"$message\""
 }

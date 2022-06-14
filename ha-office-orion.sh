@@ -9,7 +9,7 @@ if [ $(hostname) = "orion.jamieandamy.com" ]
 then
     SwitchAudioSource -s "USB Audio DAC   "
 else
-    ssh orion '/usr/local/bin/SwitchAudioSource -s "USB Audio DAC   "'
+    ssh orion '/opt/homebrew/bin/SwitchAudioSource -s "USB Audio DAC   "'
 fi
 
 notifyOfficeVolume
