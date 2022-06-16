@@ -2,7 +2,7 @@
 
 link=$(pbpaste | cut -d \# -f 1)
 
-shorter=${link##https://github.com/elastic/}
+shorter=${link##https://github.com/snyk/}
 if [ "$shorter" != "$link" ]
 then
     repo=$(echo ${shorter%%/issues/*} | sed 's|product-marketing|pmktg|g;s|website-www.elastic.co|web|g')

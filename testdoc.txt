@@ -1,7 +1,0 @@
-- type: http
-  schedule: '@every 1s'
-  urls:
-    - "https://www.elastic.co/products/beats/heartbeat"
-  check.response:
-    body: "Lightweight Shipper for Uptime Monitoring"
-    status: 200
