@@ -11,9 +11,7 @@ function hacurlServices
 {
 #    source ~/DropBox/.ha_streamdeck_token
     
-    logIt "$0 called with $*" >> /tmp/ha.log
-    
-    while getopts "i:e:j:s:" option
+while getopts "i:e:j:s:" option
     do
         case $option in
             j)
@@ -34,24 +32,25 @@ function hacurlServices
 
     output=$(curl --silent -H "Authorization: Bearer $HOME_ASSISTANT_TOKEN" -H "Content-Type: application/json" -d "$json" $url)
     
-    logIt $output
     echo $output
 }
 
 function hacurlStates
 {
 #    source ~/.home_assistant_token
-    
-    logIt "$0 called with $*" >> /tmp/ha.log
+    local entity
+    local json
+    local OPTIND
     
     while getopts "i:e:j:s:" option
     do
         case $option in
-            j)
-                json="$OPTARG"
-                ;;
             e)
                 entity="$OPTARG"
+                logIt "entity set [$entity]"
+                ;;
+            j)
+                json="$OPTARG"
                 ;;
         esac
     done
@@ -59,20 +58,21 @@ function hacurlStates
     shift $((${OPTIND} - 1))
 
     url="http://krypter:8123/api/states/${entity}"
+    logIt "URL [$url]"
 
     output=$(curl --silent -H "Authorization: Bearer $HOME_ASSISTANT_TOKEN" -H "Content-Type: application/json" $url)
     
-    logIt $output
     echo $output
 }
 
 
 function notifyOfficeVolume
 {
-    vol=$(hacurlStates -i states -e media_player.yamaha_receiver_office | /usr/local/bin/jq -r ".attributes.volume_level")
-    logIt "vol is [$vol]"
+    # hacurlStates -e media_player.yamaha_receiver_office
+    logIt CALLING
+    vol=$( hacurlStates -i states -e media_player.yamaha_receiver_office | /usr/local/bin/jq -r ".attributes.volume_level" )
 
-    vol=$( echo "$vol * 100" | bc -l)
+    vol=$( echo "$vol * 100" | bc -l )
     vol=$(printf "%.0f" $vol)
     message="Office volume set to $vol"
     osascript -e "display notification \"$message\""
