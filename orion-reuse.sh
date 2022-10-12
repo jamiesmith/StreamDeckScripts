@@ -1,8 +1,9 @@
 #!/bin/bash
 
 osascript <<END
-      tell application "System Events"
-        # keystroke "s" using {shift down, command down, opt down}
-        keystroke "s" 
-      end tell
+activate application "Safari"
+tell application "System Events"
+keystroke "r" using {command down}
+end tell
+
 END

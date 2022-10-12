@@ -1,14 +1,14 @@
 #!/bin/bash
 
-osascript <<END
-      tell application "System Events"
-          keystroke "k" using {command down}
-          keystroke tab using {shift down}
+while [ 1 ]
+do
 
-          keystroke "Slides"
-          
-          -- 36 is enter
-          key code 36
-          key code 36
-      end tell
+osascript <<END
+activate application "Chrome"
+tell application "System Events"
+keystroke "r" using {command down}
+end tell     
 END
+
+sleep 60
+done
