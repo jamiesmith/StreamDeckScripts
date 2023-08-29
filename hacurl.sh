@@ -28,8 +28,9 @@ while getopts "i:e:j:s:" option
     
     # [ -x "$(which jq)" ] || die_usage "ERROR: You need jq - try brew install jq or the linux equivalent"
 
-    url="http://krypter:8123/api/services/${service}"
-
+    url="http://${HOME_ASSISTANT_HOST}:8123/api/services/${service}"
+	# echo curl --silent -H "Authorization: Bearer $HOME_ASSISTANT_TOKEN" -H "Content-Type: application/json" -d "$json" $url
+	
     output=$(curl --silent -H "Authorization: Bearer $HOME_ASSISTANT_TOKEN" -H "Content-Type: application/json" -d "$json" $url)
     
     echo $output
@@ -57,7 +58,7 @@ function hacurlStates
     
     shift $((${OPTIND} - 1))
 
-    url="http://krypter:8123/api/states/${entity}"
+    url="http://${HOME_ASSISTANT_HOST}:8123/api/states/${entity}"
     logIt "URL [$url]"
 
     output=$(curl --silent -H "Authorization: Bearer $HOME_ASSISTANT_TOKEN" -H "Content-Type: application/json" $url)

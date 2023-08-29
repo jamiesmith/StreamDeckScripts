@@ -1,3 +1,5 @@
 #!/bin/sh
 
-pbpaste | wc -w | awk '{printf("%s words\n", $1)}' | pbcopy
+words=$(pbpaste | wc -w | awk '{printf("%s\n", $1)}')
+echo $words
+echo "$words words" | pbcopy

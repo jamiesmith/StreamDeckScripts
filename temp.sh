@@ -1,14 +1,12 @@
 #!/bin/bash
 
-while [ 1 ]
-do
-
 osascript <<END
-activate application "Chrome"
 tell application "System Events"
-keystroke "r" using {command down}
+keystroke "2" using {option down, command down}
+key code 125
+keystroke "0" using {option down, command down}
+key code 125
+key code 125
+key code 125
 end tell     
 END
-
-sleep 60
-done

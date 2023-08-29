@@ -2,7 +2,7 @@
 
 source $(pwd)/hacurl.sh
 
-service="script.office_turn_off"
+service="script.shut_down_office"
 json='{"entity_id": "media_player.yamaha_receiver_office"}'
 
 hacurlServices -s "${service}"  -j "${json}"

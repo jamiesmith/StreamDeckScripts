@@ -1,5 +1,7 @@
 #!/bin/bash
-
+# Note: this requires PyATEMMax
+#       pip3 install PyATEMMax
+#
 # ./atem-mini-toggle-bug.py
 
 /opt/homebrew/bin/python3 - << END
