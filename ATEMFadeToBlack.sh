@@ -14,7 +14,7 @@ switcher = PyATEMMax.ATEMMax()
 switcher.connect("192.168.1.250")
 switcher.waitForConnection()
 
-switcher.execDownstreamKeyerAutoKeyer(switcher.atem.dsks.dsk1)
+switcher.execFadeToBlackME(switcher.atem.mixEffects.mixEffect1)
 
 switcher.disconnect()
 

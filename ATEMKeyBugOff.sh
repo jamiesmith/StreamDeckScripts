@@ -2,7 +2,7 @@
 
 # ./atem-mini-toggle-bug.py
 
-/opt/homebrew/bin/python3 - << END
+/Users/jamie/Dropbox/StreamDeckScripts/.venv/bin/python3 - << END
 
 # Create ATEMMax object
 import PyATEMMax

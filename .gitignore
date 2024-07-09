@@ -3,3 +3,4 @@ open-canvas-campaign.sh
 .DS_Store
 Configs
 local
+.venv
