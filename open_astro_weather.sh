@@ -1,6 +1,12 @@
 #!/bin/sh
 
-osascript "$HOME/Dropbox/StreamDeckScripts/new_safari_window_on_main.scpt" \
+command="open"
+
+[[ $(hostname) = "crowley" ]] && command="osascript $HOME/Dropbox/StreamDeckScripts/new_safari_window_on_main.scpt"
+
+echo command is $command
+
+$command \
 	  "https://www.meteoblue.com/en/weather/forecast/seeing/taxahaw_united-states-of-america_4598334" \
 	  "https://www.astrospheric.com/?Latitude=34.695736&Longitude=-80.536855" \
 	  "https://www.cleardarksky.com/c/TaxaSCkey.html" \
